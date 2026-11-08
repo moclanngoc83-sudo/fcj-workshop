@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.134.3">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Đề xuất dự án :: Báo cáo thực tập</title>
+
+    
+    <link href="/css/nucleus.css?1794149417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1794149417" rel="stylesheet">
+    <link href="/css/hybrid.css?1794149417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1794149417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1794149417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1794149417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1794149417" rel="stylesheet">
+    <link href="/css/theme.css?1794149417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1794149417" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1794149417" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1794149417"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/vi/2-proposal/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1794149417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1794149417"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/workshop-sample.awsfcaj.com\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1794149417"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký thực tập"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/">
+     <b> 1. </b> Nhật ký thực tập 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Nhật ký thực tập tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Nhật ký thực tập tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Nhật ký thực tập tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Nhật ký thực tập tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Nhật ký thực tập tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Nhật ký thực tập tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Nhật ký thực tập tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Nhật ký thực tập tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Nhật ký thực tập tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Nhật ký thực tập tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Nhật ký thực tập tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Nhật ký thực tập tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Nhật ký thực tập tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Nhật ký thực tập tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Nhật ký thực tập tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Nhật ký thực tập tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Nhật ký thực tập tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Nhật ký thực tập tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Nhật ký thực tập tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Nhật ký thực tập tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Đề xuất dự án"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/vi/2-proposal/">
+     <b> 2. </b> Đề xuất dự án 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các sự kiện đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/">
+     <b> 3. </b> Các sự kiện đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Buổi gặp mặt 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/4.1-event1/">
+     <b> 3.1. </b> Buổi gặp mặt 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Buổi gặp mặt 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/4.2-event2/">
+     <b> 3.2. </b> Buổi gặp mặt 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/">
+     <b> 4. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.1-workshop-overview/">
+     <b> 4.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các điều kiện cần chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.2-prerequiste/">
+     <b> 4.2. </b> Các điều kiện cần chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/"
+  title="Xây dựng ứng dụng Web"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/">
+     <b> 4.3. </b> Xây dựng ứng dụng Web 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/"
+  title="Chuẩn bị ứng dụng Spring Boot"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 4.3.1. </b> Chuẩn bị ứng dụng Spring Boot 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/"
+  title="Đẩy mã nguồn lên GitHub"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 4.3.2. </b> Đẩy mã nguồn lên GitHub 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Xây dựng ứng dụng bằng AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/">
+     <b> 4.4. </b> Xây dựng ứng dụng bằng AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Cấu hình AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 4.4.1. </b> Cấu hình AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Xây dựng và kiểm thử ứng dụng"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 4.4.2. </b> Xây dựng và kiểm thử ứng dụng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="Triển khai ứng dụng bằng AWS CodeDeploy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/">
+     <b> 4.5. </b> Triển khai ứng dụng bằng AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/5.5.1-configure-codedeploy/"
+  title="Cấu hình AWS CodeDeploy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/5.5.1-configure-codedeploy/">
+     <b> 4.5.1. </b> Cấu hình AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/"
+  title="Triển khai và kiểm tra ứng dụng"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/">
+     <b> 4.5.2. </b> Triển khai và kiểm tra ứng dụng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.6-cleanup/">
+     <b> 4.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.7-monitoring-and-testing/"
+  title="Giám sát và kiểm thử"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.7-monitoring-and-testing/">
+     <b> 4.7. </b> Giám sát và kiểm thử 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.8-clean-up-aws-resources/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.8-clean-up-aws-resources/">
+     <b> 4.8. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/6-self-evaluation/">
+     <b> 5. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ và phản hồi"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/7-feedback/">
+     <b> 6. </b> Chia sẻ và phản hồi 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="http://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://workshop-sample.awsfcaj.com/2-proposal/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://workshop-sample.awsfcaj.com/vi/2-proposal/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>08-11-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Báo cáo thực tập</a> > Đề xuất dự án
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-tóm-tắt-dự-án">1. Tóm tắt dự án</a></li>
+    <li><a href="#2-phát-biểu-vấn-đề">2. Phát biểu vấn đề</a>
+      <ul>
+        <li><a href="#vấn-đề-cần-giải-quyết">Vấn đề cần giải quyết</a></li>
+        <li><a href="#giải-pháp-đề-xuất">Giải pháp đề xuất</a></li>
+        <li><a href="#lợi-ích-và-giá-trị-kỳ-vọng">Lợi ích và giá trị kỳ vọng</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</a>
+      <ul>
+        <li><a href="#tổng-quan-kiến-trúc">Tổng quan kiến trúc</a></li>
+        <li><a href="#các-dịch-vụ-aws-được-sử-dụng">Các dịch vụ AWS được sử dụng</a></li>
+        <li><a href="#thiết-kế-các-thành-phần">Thiết kế các thành phần</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</a>
+      <ul>
+        <li><a href="#các-giai-đoạn-triển-khai">Các giai đoạn triển khai</a></li>
+        <li><a href="#yêu-cầu-kỹ-thuật">Yêu cầu kỹ thuật</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-tiến-độ-và-các-mốc-thực-hiện">5. Tiến độ và các mốc thực hiện</a>
+      <ul>
+        <li><a href="#kế-hoạch-thực-hiện-dự-án">Kế hoạch thực hiện dự án</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-dự-toán-ngân-sách">6. Dự toán ngân sách</a>
+      <ul>
+        <li><a href="#chi-phí-hạ-tầng">Chi phí hạ tầng</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</a>
+      <ul>
+        <li><a href="#ma-trận-rủi-ro">Ma trận rủi ro</a></li>
+        <li><a href="#các-biện-pháp-giảm-thiểu-rủi-ro">Các biện pháp giảm thiểu rủi ro</a></li>
+        <li><a href="#kế-hoạch-dự-phòng">Kế hoạch dự phòng</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-kết-quả-dự-kiến">8. Kết quả dự kiến</a>
+      <ul>
+        <li><a href="#những-cải-thiện-về-mặt-kỹ-thuật">Những cải thiện về mặt kỹ thuật</a></li>
+        <li><a href="#giá-trị-lâu-dài">Giá trị lâu dài</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Đề xuất dự án
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="thiết-kế-và-triển-khai-quy-trình-cicd-tự-động-cho-ứng-dụng-web-trên-aws">Thiết kế và triển khai quy trình CI/CD tự động cho ứng dụng web trên AWS</h1>
+<h2 id="1-tóm-tắt-dự-án">1. Tóm tắt dự án</h2>
+<p>Dự án tập trung vào việc thiết kế và triển khai một quy trình Tích hợp liên tục và Phân phối/Triển khai liên tục (Continuous Integration and Continuous Delivery/Deployment – CI/CD) tự động cho ứng dụng web Spring Boot trên nền tảng Amazon Web Services (AWS).</p>
+<p>Dự án sử dụng GitHub để quản lý mã nguồn, AWS CodeBuild để biên dịch ứng dụng và thực thi các bài kiểm thử, AWS CodeDeploy để triển khai ứng dụng lên máy chủ Amazon EC2 và AWS CodePipeline để điều phối toàn bộ quy trình. Amazon CloudWatch có thể được sử dụng để xem xét các nhật ký hoạt động hiện có và giám sát những tài nguyên liên quan.</p>
+<p>Mục tiêu chính của dự án là giảm thiểu các thao tác triển khai thủ công, nâng cao tính nhất quán và xây dựng một quy trình có thể lặp lại để biên dịch, kiểm thử và triển khai ứng dụng web. Dự án được thiết kế dưới dạng một mô hình thực hành phù hợp với đề tài thực tập và có thể mở rộng bằng cách bổ sung các bước kiểm thử, kiểm tra bảo mật và tính năng giám sát.</p>
+<h2 id="2-phát-biểu-vấn-đề">2. Phát biểu vấn đề</h2>
+<h3 id="vấn-đề-cần-giải-quyết">Vấn đề cần giải quyết</h3>
+<p>Quá trình triển khai ứng dụng thủ công yêu cầu lập trình viên thực hiện nhiều bước, bao gồm lấy mã nguồn, biên dịch ứng dụng, chạy kiểm thử, chuẩn bị các tệp triển khai và chuyển ứng dụng lên máy chủ.</p>
+<p>Những bước này có thể tốn nhiều thời gian và dễ dẫn đến sai sót trong cấu hình hoặc kết quả triển khai không đồng nhất. Khi mã nguồn thay đổi thường xuyên, việc lặp lại toàn bộ quy trình thủ công cũng khiến quá trình phát hành phiên bản ứng dụng khó duy trì tính ổn định và đáng tin cậy.</p>
+<p>Đối với một dự án ứng dụng web quy mô nhỏ, việc xây dựng một quy trình triển khai tự động có tính thực tiễn sẽ giúp chuẩn hóa các công việc này và giúp việc kiểm tra kết quả Build, Deploy trở nên thuận tiện hơn.</p>
+<h3 id="giải-pháp-đề-xuất">Giải pháp đề xuất</h3>
+<p>Giải pháp được đề xuất là xây dựng một quy trình CI/CD trên AWS, kết nối hoạt động quản lý mã nguồn, biên dịch và kiểm thử tự động với quá trình triển khai ứng dụng.</p>
+<p>Mã nguồn được lưu trữ trong kho GitHub. AWS CodePipeline điều phối quy trình, AWS CodeBuild sử dụng Maven để biên dịch và kiểm thử ứng dụng, còn AWS CodeDeploy triển khai ứng dụng đã được đóng gói lên máy chủ Amazon EC2. Ứng dụng sẽ chạy trên EC2 và có thể được truy cập thông qua địa chỉ mạng đã cấu hình.</p>
+<p>Quy trình đề xuất:</p>
+<p><strong>GitHub → AWS CodePipeline → AWS CodeBuild → AWS CodeDeploy → Amazon EC2</strong></p>
+<p>Giai đoạn Build sử dụng tệp <code>buildspec.yml</code> để xác định các lệnh cần thực hiện trong quá trình biên dịch. Gói triển khai bao gồm tệp <code>appspec.yml</code> và các tập lệnh cần thiết cho CodeDeploy. Amazon CloudWatch có thể hỗ trợ quá trình xử lý sự cố thông qua việc cung cấp các nhật ký và chỉ số liên quan khi được cấu hình.</p>
+<h3 id="lợi-ích-và-giá-trị-kỳ-vọng">Lợi ích và giá trị kỳ vọng</h3>
+<p>Dự án mang lại những lợi ích kỳ vọng sau:</p>
+<ul>
+<li><strong>Giảm công việc thủ công:</strong> Tự động hóa các bước Build và Deploy được thực hiện thường xuyên.</li>
+<li><strong>Tính nhất quán:</strong> Sử dụng các lệnh Build và hướng dẫn triển khai được xác định trước.</li>
+<li><strong>Nâng cao khả năng truy xuất:</strong> Giúp việc kiểm tra kết quả thực thi Pipeline và nhật ký hoạt động thuận tiện hơn.</li>
+<li><strong>Phát hiện lỗi sớm:</strong> Thực hiện các bài kiểm thử đã cấu hình trước khi chuyển sang giai đoạn triển khai.</li>
+<li><strong>Kinh nghiệm thực hành AWS:</strong> Minh họa việc sử dụng các công cụ dành cho nhà phát triển của AWS và dịch vụ EC2.</li>
+<li><strong>Khả năng mở rộng:</strong> Tạo nền tảng để bổ sung các bước kiểm soát chất lượng (Quality Gate), kiểm tra bảo mật, quy trình khôi phục phiên bản và các tính năng giám sát nâng cao.</li>
+</ul>
+<p>Dự án chủ yếu phục vụ mục đích học tập và thực hành. Hiệu quả tiết kiệm thời gian, mức độ cải thiện độ tin cậy và chi phí vận hành thực tế cần được đánh giá sau khi hoàn thành triển khai và kiểm thử.</p>
+<h2 id="3-kiến-trúc-giải-pháp">3. Kiến trúc giải pháp</h2>
+<p>Kiến trúc đề xuất bao gồm kho lưu trữ mã nguồn, quy trình Pipeline tự động, môi trường Build, dịch vụ triển khai và máy chủ EC2 dùng để lưu trữ và chạy ứng dụng web.</p>
+<h3 id="tổng-quan-kiến-trúc">Tổng quan kiến trúc</h3>
+<ol>
+<li><strong>Quản lý mã nguồn:</strong> GitHub lưu trữ mã nguồn ứng dụng Spring Boot và các tệp cấu hình.</li>
+<li><strong>Điều phối quy trình:</strong> AWS CodePipeline điều phối các giai đoạn Source, Build và Deploy.</li>
+<li><strong>Biên dịch và kiểm thử:</strong> AWS CodeBuild sử dụng Maven để biên dịch ứng dụng, chạy các bài kiểm thử đơn vị đã cấu hình và đóng gói ứng dụng.</li>
+<li><strong>Triển khai ứng dụng:</strong> AWS CodeDeploy triển khai gói ứng dụng lên máy chủ EC2 mục tiêu bằng cách sử dụng các hướng dẫn và tập lệnh triển khai.</li>
+<li><strong>Môi trường chạy ứng dụng:</strong> Amazon EC2 vận hành ứng dụng Spring Boot sau khi được triển khai.</li>
+<li><strong>Giám sát và xử lý sự cố:</strong> Amazon CloudWatch có thể được sử dụng để xem xét các nhật ký đã cấu hình và giám sát những tài nguyên AWS liên quan.</li>
+</ol>
+<h3 id="các-dịch-vụ-aws-được-sử-dụng">Các dịch vụ AWS được sử dụng</h3>
+<ul>
+<li><strong>GitHub:</strong> Lưu trữ mã nguồn và theo dõi các thay đổi.</li>
+<li><strong>AWS CodePipeline:</strong> Điều phối quy trình CI/CD.</li>
+<li><strong>AWS CodeBuild:</strong> Biên dịch mã nguồn, chạy kiểm thử và tạo gói ứng dụng.</li>
+<li><strong>AWS CodeDeploy:</strong> Tự động hóa quá trình triển khai ứng dụng lên EC2.</li>
+<li><strong>Amazon EC2:</strong> Lưu trữ và chạy ứng dụng Spring Boot sau khi triển khai.</li>
+<li><strong>AWS Identity and Access Management (IAM):</strong> Quản lý quyền truy cập của các thành phần trong Pipeline và tài nguyên AWS.</li>
+<li><strong>Amazon CloudWatch:</strong> Hỗ trợ giám sát và xử lý sự cố thông qua các chỉ số có sẵn và nhật ký đã được cấu hình.</li>
+</ul>
+<h3 id="thiết-kế-các-thành-phần">Thiết kế các thành phần</h3>
+<ul>
+<li><strong>Kho lưu trữ mã nguồn (Source Repository):</strong> Chứa mã nguồn ứng dụng, <code>pom.xml</code>, <code>buildspec.yml</code>, <code>appspec.yml</code> và các tập lệnh triển khai.</li>
+<li><strong>Giai đoạn Source:</strong> Lấy mã nguồn dự án từ GitHub.</li>
+<li><strong>Giai đoạn Build:</strong> Thực thi các lệnh Maven trong CodeBuild để biên dịch, kiểm thử và đóng gói ứng dụng.</li>
+<li><strong>Luồng chuyển giao Artifact (Artifact Flow):</strong> Chuyển kết quả Build cần thiết đến giai đoạn triển khai.</li>
+<li><strong>Giai đoạn Deploy:</strong> Sử dụng CodeDeploy để chuyển gói ứng dụng đến máy chủ EC2 mục tiêu.</li>
+<li><strong>Môi trường chạy ứng dụng (Application Runtime):</strong> Vận hành ứng dụng Spring Boot trên EC2.</li>
+<li><strong>Giám sát (Monitoring):</strong> Sử dụng kết quả Pipeline, nhật ký triển khai và dữ liệu CloudWatch có sẵn để kiểm tra và xử lý sự cố.</li>
+</ul>
+<h2 id="4-triển-khai-kỹ-thuật">4. Triển khai kỹ thuật</h2>
+<h3 id="các-giai-đoạn-triển-khai">Các giai đoạn triển khai</h3>
+<p>Dự án được chia thành các giai đoạn sau:</p>
+<ul>
+<li><strong>Giai đoạn 1 — Phân tích yêu cầu và thiết kế kiến trúc:</strong> Xác định mục tiêu dự án, lựa chọn các dịch vụ AWS cần thiết và thiết kế quy trình CI/CD.</li>
+<li><strong>Giai đoạn 2 — Chuẩn bị ứng dụng và kho lưu trữ mã nguồn:</strong> Kiểm tra dự án Spring Boot, chuẩn bị môi trường phát triển và tổ chức mã nguồn trên GitHub.</li>
+<li><strong>Giai đoạn 3 — Tự động hóa Build và kiểm thử:</strong> Chuẩn bị các bài kiểm thử đơn vị và cấu hình AWS CodeBuild bằng tệp <code>buildspec.yml</code>.</li>
+<li><strong>Giai đoạn 4 — Chuẩn bị môi trường triển khai:</strong> Chuẩn bị máy chủ EC2, kiểm tra Security Group, quyền IAM và xác định các yêu cầu về môi trường chạy ứng dụng.</li>
+<li><strong>Giai đoạn 5 — Tự động hóa triển khai:</strong> Cấu hình CodeDeploy, chuẩn bị tệp <code>appspec.yml</code> và các tập lệnh triển khai, đồng thời xác định quy trình triển khai ứng dụng.</li>
+<li><strong>Giai đoạn 6 — Tích hợp Pipeline và đánh giá:</strong> Tích hợp các giai đoạn Source, Build và Deploy bằng CodePipeline, kiểm tra kết quả thực thi, xử lý lỗi và ghi nhận kết quả.</li>
+</ul>
+<h3 id="yêu-cầu-kỹ-thuật">Yêu cầu kỹ thuật</h3>
+<p><strong>Ứng dụng và môi trường phát triển</strong></p>
+<ul>
+<li>Một ứng dụng web Spring Boot được viết bằng ngôn ngữ Java.</li>
+<li>Bộ công cụ phát triển Java (JDK) và môi trường Build Maven tương thích.</li>
+<li>Git và kho lưu trữ GitHub để quản lý mã nguồn.</li>
+<li>Các bài kiểm thử đơn vị phù hợp với những chức năng đã được triển khai của ứng dụng.</li>
+<li>Tệp <code>pom.xml</code> dùng để khai báo các thư viện phụ thuộc và cấu hình Build của dự án.</li>
+</ul>
+<p><strong>Môi trường AWS</strong></p>
+<ul>
+<li>Một tài khoản AWS có các quyền cần thiết để cấu hình tài nguyên cho dự án.</li>
+<li>AWS CodePipeline để điều phối quy trình.</li>
+<li>AWS CodeBuild để tự động hóa quá trình Build và kiểm thử.</li>
+<li>AWS CodeDeploy để triển khai ứng dụng.</li>
+<li>Một máy chủ Amazon EC2 được cấu hình để chạy ứng dụng.</li>
+<li>Các IAM Role và IAM Policy có quyền phù hợp với từng dịch vụ.</li>
+<li>Các quy tắc Security Group chỉ cho phép lưu lượng mạng cần thiết đối với ứng dụng và hoạt động quản trị.</li>
+</ul>
+<p><strong>Cấu hình Build và Deploy</strong></p>
+<ul>
+<li><code>buildspec.yml</code> xác định các giai đoạn và lệnh thực hiện trong quá trình Build.</li>
+<li><code>appspec.yml</code> xác định các tệp và Lifecycle Hooks được sử dụng bởi CodeDeploy.</li>
+<li>Các tập lệnh triển khai quản lý vòng đời hoạt động của ứng dụng khi cần thiết.</li>
+<li>Tệp tạo tác sau Build (Build Artifact) chứa những tệp cần thiết cho quá trình triển khai.</li>
+</ul>
+<h2 id="5-tiến-độ-và-các-mốc-thực-hiện">5. Tiến độ và các mốc thực hiện</h2>
+<h3 id="kế-hoạch-thực-hiện-dự-án">Kế hoạch thực hiện dự án</h3>
+<p>Dự án được lên kế hoạch theo các mốc thời gian sau:</p>
+<ul>
+<li><strong>Tuần 1 — Kiến thức cơ bản về AWS:</strong> Tìm hiểu các dịch vụ AWS cơ bản và xác định những dịch vụ phù hợp với dự án.</li>
+<li><strong>Tuần 2 — Thiết kế CI/CD:</strong> Tìm hiểu các khái niệm CI/CD và thiết kế quy trình Pipeline dự kiến.</li>
+<li><strong>Tuần 3 — Chuẩn bị ứng dụng:</strong> Kiểm tra dự án Spring Boot và chuẩn bị môi trường phát triển.</li>
+<li><strong>Tuần 4 — Quản lý mã nguồn:</strong> Tổ chức kho lưu trữ dự án và quản lý mã nguồn bằng Git và GitHub.</li>
+<li><strong>Tuần 5 — Kiểm thử đơn vị:</strong> Kiểm tra hoặc viết các bài kiểm thử đơn vị và chuẩn bị quy trình Build bằng Maven.</li>
+<li><strong>Tuần 6 — AWS CodeBuild:</strong> Chuẩn bị tệp đặc tả Build và cấu hình giai đoạn Build tự động.</li>
+<li><strong>Tuần 7 — Chuẩn bị môi trường AWS:</strong> Chuẩn bị môi trường triển khai EC2 và kiểm tra các yêu cầu về IAM và mạng.</li>
+<li><strong>Tuần 8 — AWS CodeDeploy:</strong> Chuẩn bị các hướng dẫn và tập lệnh triển khai.</li>
+<li><strong>Tuần 9 — AWS CodePipeline:</strong> Tích hợp các giai đoạn Source, Build và Deploy.</li>
+<li><strong>Tuần 10 — Rà soát cuối cùng:</strong> Kiểm tra quy trình, xem xét các nhật ký hiện có, ghi nhận những hạn chế và hoàn thiện báo cáo thực tập.</li>
+</ul>
+<p>Tiến độ trên thể hiện trình tự công việc dự kiến. Ngày hoàn thành và kết quả thực tế cần được cập nhật phù hợp với những công việc đã thực hiện.</p>
+<h2 id="6-dự-toán-ngân-sách">6. Dự toán ngân sách</h2>
+<p>Dự án sử dụng các công cụ dành cho nhà phát triển được AWS quản lý và một máy chủ EC2. Chi phí thực tế phụ thuộc vào Khu vực AWS được lựa chọn, loại Instance, mức độ sử dụng tài nguyên, dung lượng lưu trữ, lưu lượng truyền dữ liệu và bảng giá của từng dịch vụ.</p>
+<p>Có thể sử dụng AWS Pricing Calculator để ước tính chi phí trước khi triển khai tài nguyên:</p>
+<p><a href="https://calculator.aws/">AWS Pricing Calculator</a></p>
+<h3 id="chi-phí-hạ-tầng">Chi phí hạ tầng</h3>
+<p>Các thành phần có thể phát sinh chi phí bao gồm:</p>
+<ul>
+<li><strong>Amazon EC2:</strong> Chi phí vận hành Instance, dung lượng lưu trữ được gắn kèm và các khoản phí liên quan đến địa chỉ IPv4 công khai hoặc truyền dữ liệu (nếu có).</li>
+<li><strong>AWS CodeBuild:</strong> Chi phí dựa trên số phút Build và môi trường tính toán được lựa chọn.</li>
+<li><strong>AWS CodePipeline:</strong> Chi phí Pipeline dựa trên loại Pipeline được lựa chọn và mức độ sử dụng tương ứng.</li>
+<li><strong>AWS CodeDeploy:</strong> Chi phí sử dụng dịch vụ triển khai; ngoài ra có thể phát sinh chi phí từ các tài nguyên EC2 bên dưới.</li>
+<li><strong>Amazon CloudWatch:</strong> Chi phí tiếp nhận nhật ký, lưu trữ nhật ký, chỉ số và cảnh báo khi có áp dụng.</li>
+<li><strong>Các tài nguyên AWS khác:</strong> Chi phí lưu trữ, mạng hoặc các dịch vụ hỗ trợ bổ sung nếu cần thiết.</li>
+</ul>
+<p>Chi phí hàng tháng cuối cùng cần được tính toán dựa trên cấu hình thực tế và mức độ sử dụng dự kiến. Đề xuất này chưa đưa ra một tổng chi phí cố định vì kích thước tài nguyên, mức độ sử dụng và thông tin giá cụ thể vẫn chưa được xác định.</p>
+<p>Để kiểm soát chi phí, dự án nên sử dụng tài nguyên có cấu hình phù hợp, thường xuyên theo dõi mức độ sử dụng và dừng hoặc xóa những tài nguyên không còn cần thiết.</p>
+<h2 id="7-đánh-giá-rủi-ro">7. Đánh giá rủi ro</h2>
+<h3 id="ma-trận-rủi-ro">Ma trận rủi ro</h3>
+<ul>
+<li><strong>Lỗi Build:</strong> Mức độ ảnh hưởng trung bình, xác suất xảy ra trung bình. Các thư viện phụ thuộc, phiên bản Java hoặc cấu hình Maven không chính xác có thể khiến quá trình Build thất bại.</li>
+<li><strong>Lỗi triển khai:</strong> Mức độ ảnh hưởng cao, xác suất xảy ra trung bình. Hướng dẫn triển khai, quyền thực thi của tập lệnh hoặc cấu hình môi trường chạy không chính xác có thể khiến ứng dụng không thể khởi động.</li>
+<li><strong>Lỗi quyền IAM:</strong> Mức độ ảnh hưởng từ trung bình đến cao, xác suất xảy ra trung bình. Việc thiếu quyền hoặc cấp quyền quá mức có thể làm gián đoạn Pipeline hoặc tạo ra rủi ro bảo mật.</li>
+<li><strong>Sự cố mạng và kết nối:</strong> Mức độ ảnh hưởng trung bình, xác suất xảy ra trung bình. Các quy tắc Security Group hoặc sự cố kết nối có thể khiến người dùng không thể truy cập ứng dụng.</li>
+<li><strong>Chi phí AWS phát sinh ngoài dự kiến:</strong> Mức độ ảnh hưởng trung bình, xác suất xảy ra từ thấp đến trung bình. Các tài nguyên vẫn hoạt động khi không còn cần thiết hoặc mức sử dụng vượt quá dự toán có thể làm tăng chi phí.</li>
+</ul>
+<p>Các mức đánh giá trên chỉ mang tính sơ bộ và cần được xem xét lại trong quá trình triển khai dự án.</p>
+<h3 id="các-biện-pháp-giảm-thiểu-rủi-ro">Các biện pháp giảm thiểu rủi ro</h3>
+<ul>
+<li><strong>Đảm bảo độ tin cậy của Build:</strong> Sử dụng các lệnh Build được xác định rõ ràng, chạy kiểm thử đơn vị và kiểm tra nhật ký CodeBuild.</li>
+<li><strong>Đảm bảo độ tin cậy của triển khai:</strong> Xác thực gói triển khai, kiểm tra các tập lệnh trong vòng đời triển khai và xem xét nhật ký CodeDeploy.</li>
+<li><strong>Kiểm soát quyền truy cập:</strong> Áp dụng nguyên tắc cấp quyền tối thiểu (Least Privilege) cho IAM và tránh lưu trữ thông tin xác thực trực tiếp trong mã nguồn.</li>
+<li><strong>Bảo mật mạng:</strong> Hạn chế quyền truy cập từ bên ngoài, chỉ cho phép các cổng và địa chỉ nguồn cần thiết cho dự án.</li>
+<li><strong>Quản lý chi phí:</strong> Theo dõi thông tin thanh toán AWS, ước tính chi phí trước khi triển khai và thiết lập cảnh báo ngân sách khi phù hợp.</li>
+</ul>
+<h3 id="kế-hoạch-dự-phòng">Kế hoạch dự phòng</h3>
+<ul>
+<li>Nếu quá trình Build thất bại, kiểm tra nhật ký Build, sửa cấu hình và thực hiện Build lại.</li>
+<li>Nếu quá trình triển khai thất bại, kiểm tra thông tin chi tiết của lần triển khai trong CodeDeploy và nhật ký ứng dụng, sau đó điều chỉnh cấu hình triển khai.</li>
+<li>Nếu ứng dụng không thể truy cập, kiểm tra máy chủ EC2 và môi trường chạy ứng dụng trước khi thử triển khai lại.</li>
+<li>Nếu không còn cần sử dụng tài nguyên, tiến hành dừng hoặc xóa chúng khi phù hợp sau khi xác nhận thao tác đó không làm mất dữ liệu cần thiết.</li>
+</ul>
+<h2 id="8-kết-quả-dự-kiến">8. Kết quả dự kiến</h2>
+<h3 id="những-cải-thiện-về-mặt-kỹ-thuật">Những cải thiện về mặt kỹ thuật</h3>
+<p>Dự án kỳ vọng xây dựng được một quy trình CI/CD có thể lặp lại, kết nối hoạt động quản lý mã nguồn, biên dịch và kiểm thử tự động với quá trình triển khai ứng dụng web được lưu trữ trên máy chủ EC2.</p>
+<p>Các kết quả kỹ thuật dự kiến bao gồm:</p>
+<ul>
+<li>Một kho lưu trữ GitHub chứa mã nguồn ứng dụng và các tệp cấu hình CI/CD.</li>
+<li>Một dự án AWS CodeBuild có khả năng Build và kiểm thử ứng dụng.</li>
+<li>Một cấu hình AWS CodeDeploy phục vụ triển khai ứng dụng lên EC2.</li>
+<li>Một quy trình AWS CodePipeline điều phối các giai đoạn Source, Build và Deploy.</li>
+<li>Một quy trình được tài liệu hóa để kiểm tra kết quả Build và triển khai.</li>
+<li>Một phương pháp cơ bản để giám sát và xử lý sự cố bằng các nhật ký và chỉ số AWS hiện có.</li>
+</ul>
+<h3 id="giá-trị-lâu-dài">Giá trị lâu dài</h3>
+<p>Dự án mang lại kinh nghiệm thực hành về các nguyên tắc CI/CD và những công cụ dành cho nhà phát triển của AWS. Kiến trúc này có thể được sử dụng làm nền tảng cho những cải tiến trong tương lai, bao gồm bổ sung các bài kiểm thử tự động, kiểm tra chất lượng mã nguồn, quét bảo mật, các bước phê duyệt, chiến lược khôi phục phiên bản và hệ thống giám sát toàn diện hơn.</p>
+<p>Phần đánh giá cuối cùng cần ghi nhận những thành phần đã được triển khai thành công, các bài kiểm thử đã thực hiện, những hạn chế gặp phải và các hướng cải thiện có thể tiếp tục thực hiện trong tương lai.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/1-worklog/1.10-week10/" title="Nhật ký thực tập tuần 10"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/4-eventparticipated/" title="Các sự kiện đã tham gia" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1794149417"></script>
+    <script src="/js/jquery.sticky.js?1794149417"></script>
+    <script src="/js/featherlight.min.js?1794149417"></script>
+    <script src="/js/highlight.pack.js?1794149417"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1794149417"></script>
+    <script src="/js/learn.js?1794149417"></script>
+    <script src="/js/hugo-learn.js?1794149417"></script>
+
+    <link href="/mermaid/mermaid.css?1794149417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1794149417"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

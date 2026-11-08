@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.134.3">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Proposal :: Internship Report</title>
+
+    
+    <link href="/css/nucleus.css?1794149417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1794149417" rel="stylesheet">
+    <link href="/css/hybrid.css?1794149417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1794149417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1794149417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1794149417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1794149417" rel="stylesheet">
+    <link href="/css/theme.css?1794149417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1794149417" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1794149417" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1794149417"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/2-proposal/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1794149417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1794149417"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/workshop-sample.awsfcaj.com\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1794149417"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/1-worklog/"
+  title="Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/">
+     <b> 1. </b> Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/1-worklog/1.1-week1/"
+  title="Week 1 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Week 1 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.2-week2/"
+  title="Week 2 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Week 2 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.3-week3/"
+  title="Week 3 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Week 3 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.4-week4/"
+  title="Week 4 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Week 4 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.5-week5/"
+  title="Week 5 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Week 5 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.6-week6/"
+  title="Week 6 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Week 6 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.7-week7/"
+  title="Week 7 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Week 7 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.8-week8/"
+  title="Week 8 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Week 8 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.9-week9/"
+  title="Week 9 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Week 9 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/1-worklog/1.10-week10/"
+  title="Week 10 Worklog"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Week 10 Worklog 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/2-proposal/"
+  title="Proposal"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/2-proposal/">
+     <b> 2. </b> Proposal 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/4-eventparticipated/"
+  title="Events Participated"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/">
+     <b> 3. </b> Events Participated 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/4-eventparticipated/4.1-event1/"
+  title="Meeting 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/4.1-event1/">
+     <b> 3.1. </b> Meeting 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/4-eventparticipated/4.2-event2/"
+  title="Meeting 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/4-eventparticipated/4.2-event2/">
+     <b> 3.2. </b> Meeting 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/">
+     <b> 4. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.1-workshop-overview/"
+  title="Introduction"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.1-workshop-overview/">
+     <b> 4.1. </b> Introduction 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.2-prerequiste/"
+  title="Prerequisites"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.2-prerequiste/">
+     <b> 4.2. </b> Prerequisites 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/"
+  title="Build the Web Application"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/">
+     <b> 4.3. </b> Build the Web Application 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/"
+  title="Prepare the Spring Boot Application"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 4.3.1. </b> Prepare the Spring Boot Application 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/"
+  title="Push the Source Code to GitHub"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 4.3.2. </b> Push the Source Code to GitHub 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/"
+  title="Build with AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/">
+     <b> 4.4. </b> Build with AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Configure AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 4.4.1. </b> Configure AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Build and Test the Application"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 4.4.2. </b> Build and Test the Application 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.5-policy/"
+  title="Deploy the Application with AWS CodeDeploy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.5-policy/">
+     <b> 4.5. </b> Deploy the Application with AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/5-workshop/5.5-policy/5.5.1-configure-codedeploy/"
+  title="Configure AWS CodeDeploy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.5-policy/5.5.1-configure-codedeploy/">
+     <b> 4.5.1. </b> Configure AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.5-policy/5.5.2-deploy-and-verify/"
+  title="Deploy and Verify the Application"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.5-policy/5.5.2-deploy-and-verify/">
+     <b> 4.5.2. </b> Deploy and Verify the Application 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.6-cleanup/"
+  title="Clean Up"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.6-cleanup/">
+     <b> 4.6. </b> Clean Up 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.7-monitoring-and-testing/"
+  title="Monitoring and Testing"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.7-monitoring-and-testing/">
+     <b> 4.7. </b> Monitoring and Testing 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/5-workshop/5.8-clean-up-aws-resources/"
+  title="Clean Up"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/5-workshop/5.8-clean-up-aws-resources/">
+     <b> 4.8. </b> Clean Up 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/6-self-evaluation/"
+  title="Self-Assessment"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/6-self-evaluation/">
+     <b> 5. </b> Self-Assessment 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/7-feedback/"
+  title="Sharing and Feedback"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/7-feedback/">
+     <b> 6. </b> Sharing and Feedback 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="https://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://workshop-sample.awsfcaj.com/2-proposal/"
+                  selected
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://workshop-sample.awsfcaj.com/vi/2-proposal/"
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>08-11-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Internship Report</a> > Proposal
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-executive-summary">1. Executive Summary</a></li>
+    <li><a href="#2-problem-statement">2. Problem Statement</a>
+      <ul>
+        <li><a href="#what-is-the-problem">What Is the Problem?</a></li>
+        <li><a href="#the-solution">The Solution</a></li>
+        <li><a href="#benefits-and-expected-value">Benefits and Expected Value</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-solution-architecture">3. Solution Architecture</a>
+      <ul>
+        <li><a href="#architecture-overview">Architecture Overview</a></li>
+        <li><a href="#aws-services-used">AWS Services Used</a></li>
+        <li><a href="#component-design">Component Design</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-technical-implementation">4. Technical Implementation</a>
+      <ul>
+        <li><a href="#implementation-phases">Implementation Phases</a></li>
+        <li><a href="#technical-requirements">Technical Requirements</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-timeline--milestones">5. Timeline &amp; Milestones</a>
+      <ul>
+        <li><a href="#project-timeline">Project Timeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-budget-estimation">6. Budget Estimation</a>
+      <ul>
+        <li><a href="#infrastructure-costs">Infrastructure Costs</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-risk-assessment">7. Risk Assessment</a>
+      <ul>
+        <li><a href="#risk-matrix">Risk Matrix</a></li>
+        <li><a href="#mitigation-strategies">Mitigation Strategies</a></li>
+        <li><a href="#contingency-plans">Contingency Plans</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-expected-outcomes">8. Expected Outcomes</a>
+      <ul>
+        <li><a href="#technical-improvements">Technical Improvements</a></li>
+        <li><a href="#long-term-value">Long-Term Value</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Proposal
+            </h1>
+          
+
+        
+
+
+
+	<h1 id="automated-cicd-pipeline-for-web-application-deployment-on-aws">Automated CI/CD Pipeline for Web Application Deployment on AWS</h1>
+<h2 id="1-executive-summary">1. Executive Summary</h2>
+<p>This project focuses on designing and implementing an automated Continuous Integration and Continuous Delivery/Deployment (CI/CD) pipeline for a Spring Boot web application on Amazon Web Services (AWS).</p>
+<p>The project uses GitHub to manage source code, AWS CodeBuild to compile the application and execute tests, AWS CodeDeploy to deploy the application to an Amazon EC2 instance, and AWS CodePipeline to coordinate the entire workflow. Amazon CloudWatch can be used to review available logs and monitor relevant resources.</p>
+<p>The main objective is to reduce manual deployment steps, improve consistency, and establish a repeatable process for building, testing, and deploying a web application. The project is designed as a practical demonstration suitable for an internship project and can be extended with additional testing, security checks, and monitoring features.</p>
+<h2 id="2-problem-statement">2. Problem Statement</h2>
+<h3 id="what-is-the-problem">What Is the Problem?</h3>
+<p>Manual application deployment requires developers to perform several steps, including retrieving source code, building the application, running tests, preparing deployment files, and transferring the application to a server.</p>
+<p>These steps can be time-consuming and may lead to configuration mistakes or inconsistent deployment results. When source code changes frequently, repeating the same process manually also makes it harder to maintain a reliable release workflow.</p>
+<p>For a small web application project, a practical automated deployment pipeline can help standardize these tasks and make build and deployment results easier to review.</p>
+<h3 id="the-solution">The Solution</h3>
+<p>The proposed solution is an AWS-based CI/CD pipeline that connects source code management, automated building and testing, and application deployment.</p>
+<p>The source code is stored in a GitHub repository. AWS CodePipeline coordinates the workflow, AWS CodeBuild builds and tests the application using Maven, and AWS CodeDeploy deploys the packaged application to an Amazon EC2 instance. The application runs on EC2 and can be accessed through its configured network endpoint.</p>
+<p>The proposed workflow is:</p>
+<p><strong>GitHub → AWS CodePipeline → AWS CodeBuild → AWS CodeDeploy → Amazon EC2</strong></p>
+<p>The build stage uses a <code>buildspec.yml</code> file to define build commands. The deployment package includes an <code>appspec.yml</code> file and the scripts required by CodeDeploy. Amazon CloudWatch can support troubleshooting by providing access to relevant logs and metrics when configured.</p>
+<h3 id="benefits-and-expected-value">Benefits and Expected Value</h3>
+<p>The project provides the following expected benefits:</p>
+<ul>
+<li><strong>Reduced manual work:</strong> Automates recurring build and deployment steps.</li>
+<li><strong>Consistency:</strong> Uses defined build commands and deployment instructions.</li>
+<li><strong>Improved traceability:</strong> Makes pipeline execution results and logs easier to review.</li>
+<li><strong>Earlier error detection:</strong> Runs configured tests before the deployment stage.</li>
+<li><strong>Practical AWS experience:</strong> Demonstrates the use of AWS developer tools and EC2.</li>
+<li><strong>Extensibility:</strong> Provides a foundation for adding quality gates, security checks, rollback procedures, and more advanced monitoring.</li>
+</ul>
+<p>The project is intended primarily for educational and demonstration purposes. Actual time savings, reliability improvements, and operating costs should be evaluated after implementation and testing.</p>
+<h2 id="3-solution-architecture">3. Solution Architecture</h2>
+<p>The proposed architecture consists of a source code repository, an automated pipeline, a build environment, a deployment service, and an EC2 instance hosting the web application.</p>
+<h3 id="architecture-overview">Architecture Overview</h3>
+<ol>
+<li><strong>Source Code Management:</strong> GitHub stores the Spring Boot source code and configuration files.</li>
+<li><strong>Pipeline Orchestration:</strong> AWS CodePipeline coordinates the source, build, and deployment stages.</li>
+<li><strong>Build and Testing:</strong> AWS CodeBuild uses Maven to compile the application, run configured unit tests, and package the application.</li>
+<li><strong>Application Deployment:</strong> AWS CodeDeploy deploys the application package to the target EC2 instance using the deployment instructions and scripts.</li>
+<li><strong>Application Hosting:</strong> Amazon EC2 runs the deployed Spring Boot application.</li>
+<li><strong>Monitoring and Troubleshooting:</strong> Amazon CloudWatch can be used to review configured logs and monitor relevant AWS resources.</li>
+</ol>
+<h3 id="aws-services-used">AWS Services Used</h3>
+<ul>
+<li><strong>GitHub:</strong> Stores source code and tracks changes.</li>
+<li><strong>AWS CodePipeline:</strong> Coordinates the CI/CD workflow.</li>
+<li><strong>AWS CodeBuild:</strong> Compiles the source code, runs tests, and generates the application package.</li>
+<li><strong>AWS CodeDeploy:</strong> Automates application deployment to EC2.</li>
+<li><strong>Amazon EC2:</strong> Hosts the deployed Spring Boot application.</li>
+<li><strong>AWS Identity and Access Management (IAM):</strong> Controls permissions for pipeline components and AWS resources.</li>
+<li><strong>Amazon CloudWatch:</strong> Supports monitoring and troubleshooting through available metrics and configured logs.</li>
+</ul>
+<h3 id="component-design">Component Design</h3>
+<ul>
+<li><strong>Source Repository:</strong> Contains application source code, <code>pom.xml</code>, <code>buildspec.yml</code>, <code>appspec.yml</code>, and deployment scripts.</li>
+<li><strong>Source Stage:</strong> Retrieves the project source code from GitHub.</li>
+<li><strong>Build Stage:</strong> Runs Maven commands in CodeBuild to compile, test, and package the application.</li>
+<li><strong>Artifact Flow:</strong> Passes the required build output to the deployment stage.</li>
+<li><strong>Deploy Stage:</strong> Uses CodeDeploy to deliver the application package to the target EC2 instance.</li>
+<li><strong>Application Runtime:</strong> Runs the Spring Boot application on EC2.</li>
+<li><strong>Monitoring:</strong> Uses available pipeline results, deployment logs, and CloudWatch data to investigate issues.</li>
+</ul>
+<h2 id="4-technical-implementation">4. Technical Implementation</h2>
+<h3 id="implementation-phases">Implementation Phases</h3>
+<p>The project is divided into the following phases:</p>
+<ul>
+<li><strong>Phase 1 — Requirement Analysis and Architecture Design:</strong> Define the project objectives, identify the required AWS services, and design the CI/CD workflow.</li>
+<li><strong>Phase 2 — Application and Repository Preparation:</strong> Review the Spring Boot project, prepare the development environment, and organize the source code in GitHub.</li>
+<li><strong>Phase 3 — Automated Build and Testing:</strong> Prepare unit tests and configure AWS CodeBuild with a <code>buildspec.yml</code> file.</li>
+<li><strong>Phase 4 — Deployment Environment Preparation:</strong> Prepare the EC2 instance, review security groups and IAM permissions, and identify the application runtime requirements.</li>
+<li><strong>Phase 5 — Automated Deployment:</strong> Configure CodeDeploy, prepare the <code>appspec.yml</code> file and deployment scripts, and define the deployment process.</li>
+<li><strong>Phase 6 — Pipeline Integration and Evaluation:</strong> Integrate the source, build, and deployment stages using CodePipeline, review execution results, troubleshoot errors, and document the outcome.</li>
+</ul>
+<h3 id="technical-requirements">Technical Requirements</h3>
+<p><strong>Application and Development Environment</strong></p>
+<ul>
+<li>A Spring Boot web application written in Java.</li>
+<li>A compatible Java Development Kit (JDK) and Maven build environment.</li>
+<li>Git and a GitHub repository for source code management.</li>
+<li>Unit tests appropriate to the application&rsquo;s implemented functions.</li>
+<li>A <code>pom.xml</code> file defining project dependencies and build configuration.</li>
+</ul>
+<p><strong>AWS Environment</strong></p>
+<ul>
+<li>An AWS account with the permissions required to configure the project resources.</li>
+<li>AWS CodePipeline for workflow orchestration.</li>
+<li>AWS CodeBuild for automated builds and tests.</li>
+<li>AWS CodeDeploy for application deployment.</li>
+<li>An Amazon EC2 instance configured to run the application.</li>
+<li>IAM roles and policies with permissions appropriate to each service.</li>
+<li>Security group rules that permit only the network traffic required by the application and administrative access.</li>
+</ul>
+<p><strong>Build and Deployment Configuration</strong></p>
+<ul>
+<li><code>buildspec.yml</code> defines the build phases and commands.</li>
+<li><code>appspec.yml</code> defines the files and lifecycle hooks used by CodeDeploy.</li>
+<li>Deployment scripts manage the application lifecycle where required.</li>
+<li>The build artifact contains the files needed by the deployment process.</li>
+</ul>
+<h2 id="5-timeline--milestones">5. Timeline &amp; Milestones</h2>
+<h3 id="project-timeline">Project Timeline</h3>
+<p>The project is planned around the following milestones:</p>
+<ul>
+<li><strong>Week 1 — AWS Fundamentals:</strong> Study basic AWS services and identify the services relevant to the project.</li>
+<li><strong>Week 2 — CI/CD Design:</strong> Learn CI/CD concepts and design the proposed pipeline.</li>
+<li><strong>Week 3 — Application Preparation:</strong> Review the Spring Boot project and prepare the development environment.</li>
+<li><strong>Week 4 — Source Code Management:</strong> Organize the project repository and manage source code with Git and GitHub.</li>
+<li><strong>Week 5 — Unit Testing:</strong> Review or write unit tests and prepare the Maven build process.</li>
+<li><strong>Week 6 — AWS CodeBuild:</strong> Prepare the build specification and configure the automated build stage.</li>
+<li><strong>Week 7 — AWS Environment Preparation:</strong> Prepare the EC2 deployment environment and review IAM and network requirements.</li>
+<li><strong>Week 8 — AWS CodeDeploy:</strong> Prepare deployment instructions and scripts.</li>
+<li><strong>Week 9 — AWS CodePipeline:</strong> Integrate the source, build, and deployment stages.</li>
+<li><strong>Week 10 — Final Review:</strong> Review the workflow, examine available logs, document limitations, and complete the internship report.</li>
+</ul>
+<p>The timeline represents the planned sequence. Actual completion dates and results should be updated to match the work performed.</p>
+<h2 id="6-budget-estimation">6. Budget Estimation</h2>
+<p>The project uses AWS managed developer tools and an EC2 instance. The actual cost depends on the selected AWS Region, instance type, resource usage, storage, data transfer, and service pricing.</p>
+<p>The AWS Pricing Calculator can be used to estimate costs before deploying the resources:</p>
+<p><a href="https://calculator.aws/">AWS Pricing Calculator</a></p>
+<h3 id="infrastructure-costs">Infrastructure Costs</h3>
+<p>Potential cost components include:</p>
+<ul>
+<li><strong>Amazon EC2:</strong> Instance runtime, attached storage, and any applicable public IPv4 or data transfer charges.</li>
+<li><strong>AWS CodeBuild:</strong> Build minutes and selected compute environment.</li>
+<li><strong>AWS CodePipeline:</strong> Pipeline pricing based on the selected pipeline type and applicable usage.</li>
+<li><strong>AWS CodeDeploy:</strong> Deployment service usage; charges may also arise from the underlying EC2 resources.</li>
+<li><strong>Amazon CloudWatch:</strong> Log ingestion, log storage, metrics, and alarms where applicable.</li>
+<li><strong>Other AWS Resources:</strong> Additional storage, networking, or supporting services if required.</li>
+</ul>
+<p>The final monthly estimate should be calculated using the actual configuration and expected usage. No fixed total is assumed in this proposal because the required resource sizes, usage levels, and pricing details have not yet been confirmed.</p>
+<p>To control costs, the project should use appropriately sized resources, monitor usage, and stop or delete resources when they are no longer needed.</p>
+<h2 id="7-risk-assessment">7. Risk Assessment</h2>
+<h3 id="risk-matrix">Risk Matrix</h3>
+<ul>
+<li><strong>Build Failures:</strong> Medium impact, medium probability. Incorrect dependencies, Java versions, or Maven configuration may cause the build to fail.</li>
+<li><strong>Deployment Failures:</strong> High impact, medium probability. Incorrect deployment instructions, script permissions, or runtime configuration may prevent the application from starting.</li>
+<li><strong>IAM Permission Errors:</strong> Medium to high impact, medium probability. Missing or excessive permissions may interrupt the pipeline or create security risks.</li>
+<li><strong>Network and Connectivity Issues:</strong> Medium impact, medium probability. Security group rules or connectivity problems may prevent access to the application.</li>
+<li><strong>Unexpected AWS Costs:</strong> Medium impact, low to medium probability. Resources left running or usage beyond the estimate may increase costs.</li>
+</ul>
+<p>These ratings are preliminary and should be reviewed as the implementation progresses.</p>
+<h3 id="mitigation-strategies">Mitigation Strategies</h3>
+<ul>
+<li><strong>Build Reliability:</strong> Use explicit build commands, run unit tests, and inspect CodeBuild logs.</li>
+<li><strong>Deployment Reliability:</strong> Validate the deployment package, check lifecycle scripts, and review CodeDeploy logs.</li>
+<li><strong>Access Control:</strong> Apply least-privilege IAM permissions and avoid storing credentials directly in source code.</li>
+<li><strong>Network Security:</strong> Restrict inbound access to the ports and source addresses required for the project.</li>
+<li><strong>Cost Management:</strong> Review AWS billing information, estimate costs before deployment, and configure budget alerts where appropriate.</li>
+</ul>
+<h3 id="contingency-plans">Contingency Plans</h3>
+<ul>
+<li>If a build fails, inspect the build logs, correct the configuration, and run the build again.</li>
+<li>If deployment fails, inspect the CodeDeploy deployment details and application logs, then correct the deployment configuration.</li>
+<li>If the application becomes unavailable, investigate the EC2 instance and application runtime before attempting another deployment.</li>
+<li>If resources are no longer required, stop or delete them as appropriate after confirming that doing so will not remove needed data.</li>
+</ul>
+<h2 id="8-expected-outcomes">8. Expected Outcomes</h2>
+<h3 id="technical-improvements">Technical Improvements</h3>
+<p>The project is expected to produce a repeatable CI/CD workflow that connects source code management, automated building and testing, and deployment to an EC2-hosted web application.</p>
+<p>Expected technical outcomes include:</p>
+<ul>
+<li>A GitHub repository containing the application and CI/CD configuration files.</li>
+<li>An AWS CodeBuild project that builds and tests the application.</li>
+<li>An AWS CodeDeploy configuration for deploying the application to EC2.</li>
+<li>An AWS CodePipeline workflow coordinating the source, build, and deployment stages.</li>
+<li>A documented process for reviewing build and deployment results.</li>
+<li>A basic approach to monitoring and troubleshooting using available AWS logs and metrics.</li>
+</ul>
+<h3 id="long-term-value">Long-Term Value</h3>
+<p>The project provides practical experience with CI/CD principles and AWS developer tools. Its architecture can serve as a starting point for future improvements, including additional automated tests, code quality checks, security scanning, approval stages, rollback strategies, and more comprehensive monitoring.</p>
+<p>The final evaluation should document which components were implemented successfully, the tests performed, any limitations encountered, and the improvements that remain for future work.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/1-worklog/1.10-week10/" title="Week 10 Worklog"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/4-eventparticipated/" title="Events Participated" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1794149417"></script>
+    <script src="/js/jquery.sticky.js?1794149417"></script>
+    <script src="/js/featherlight.min.js?1794149417"></script>
+    <script src="/js/highlight.pack.js?1794149417"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1794149417"></script>
+    <script src="/js/learn.js?1794149417"></script>
+    <script src="/js/hugo-learn.js?1794149417"></script>
+
+    <link href="/mermaid/mermaid.css?1794149417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1794149417"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>

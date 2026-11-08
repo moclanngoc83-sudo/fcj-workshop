@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.134.3">
+    <meta
+  name="description"
+  content=""
+/>
+<meta name="author" content="thienlh@thienlu.com" />
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Triển khai và kiểm tra ứng dụng :: Báo cáo thực tập</title>
+
+    
+    <link href="/css/nucleus.css?1794149417" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1794149417" rel="stylesheet">
+    <link href="/css/hybrid.css?1794149417" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1794149417" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1794149417" rel="stylesheet">
+    <link href="/css/auto-complete.css?1794149417" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1794149417" rel="stylesheet">
+    <link href="/css/theme.css?1794149417" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1794149417" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1794149417" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1794149417"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+  </head>
+  <body class="" data-url="/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/">
+    <nav
+  id="sidebar"
+  class="showVisitedLinks"
+>
+   
+  <div id="header-wrapper">
+    <div id="header"><a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+</div>
+     <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1794149417"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1794149417"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/workshop-sample.awsfcaj.com\/\/vi";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1794149417"></script>
+ 
+  </div>
+
+  <div class="highlightable">
+    <ul class="topics">
+               
+<li
+  data-nav-id="/vi/1-worklog/"
+  title="Nhật ký thực tập"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/">
+     <b> 1. </b> Nhật ký thực tập 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/1-worklog/1.1-week1/"
+  title="Nhật ký thực tập tuần 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.1-week1/">
+     <b> 1.1. </b> Nhật ký thực tập tuần 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.2-week2/"
+  title="Nhật ký thực tập tuần 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.2-week2/">
+     <b> 1.2. </b> Nhật ký thực tập tuần 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.3-week3/"
+  title="Nhật ký thực tập tuần 3"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.3-week3/">
+     <b> 1.3. </b> Nhật ký thực tập tuần 3 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.4-week4/"
+  title="Nhật ký thực tập tuần 4"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.4-week4/">
+     <b> 1.4. </b> Nhật ký thực tập tuần 4 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.5-week5/"
+  title="Nhật ký thực tập tuần 5"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.5-week5/">
+     <b> 1.5. </b> Nhật ký thực tập tuần 5 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.6-week6/"
+  title="Nhật ký thực tập tuần 6"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.6-week6/">
+     <b> 1.6. </b> Nhật ký thực tập tuần 6 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.7-week7/"
+  title="Nhật ký thực tập tuần 7"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.7-week7/">
+     <b> 1.7. </b> Nhật ký thực tập tuần 7 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.8-week8/"
+  title="Nhật ký thực tập tuần 8"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.8-week8/">
+     <b> 1.8. </b> Nhật ký thực tập tuần 8 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.9-week9/"
+  title="Nhật ký thực tập tuần 9"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.9-week9/">
+     <b> 1.9. </b> Nhật ký thực tập tuần 9 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/1-worklog/1.10-week10/"
+  title="Nhật ký thực tập tuần 10"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/1-worklog/1.10-week10/">
+     <b> 1.10. </b> Nhật ký thực tập tuần 10 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/2-proposal/"
+  title="Đề xuất dự án"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/2-proposal/">
+     <b> 2. </b> Đề xuất dự án 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/4-eventparticipated/"
+  title="Các sự kiện đã tham gia"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/">
+     <b> 3. </b> Các sự kiện đã tham gia 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.1-event1/"
+  title="Buổi gặp mặt 1"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/4.1-event1/">
+     <b> 3.1. </b> Buổi gặp mặt 1 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/4-eventparticipated/4.2-event2/"
+  title="Buổi gặp mặt 2"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/4-eventparticipated/4.2-event2/">
+     <b> 3.2. </b> Buổi gặp mặt 2 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/5-workshop/"
+  title="Workshop"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/">
+     <b> 4. </b> Workshop 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.1-workshop-overview/"
+  title="Giới thiệu"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.1-workshop-overview/">
+     <b> 4.1. </b> Giới thiệu 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.2-prerequiste/"
+  title="Các điều kiện cần chuẩn bị"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.2-prerequiste/">
+     <b> 4.2. </b> Các điều kiện cần chuẩn bị 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/"
+  title="Xây dựng ứng dụng Web"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/">
+     <b> 4.3. </b> Xây dựng ứng dụng Web 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/"
+  title="Chuẩn bị ứng dụng Spring Boot"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/">
+     <b> 4.3.1. </b> Chuẩn bị ứng dụng Spring Boot 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/"
+  title="Đẩy mã nguồn lên GitHub"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/">
+     <b> 4.3.2. </b> Đẩy mã nguồn lên GitHub 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/"
+  title="Xây dựng ứng dụng bằng AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/">
+     <b> 4.4. </b> Xây dựng ứng dụng bằng AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/"
+  title="Cấu hình AWS CodeBuild"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/5.4.1-prepare/">
+     <b> 4.4.1. </b> Cấu hình AWS CodeBuild 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/"
+  title="Xây dựng và kiểm thử ứng dụng"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/">
+     <b> 4.4.2. </b> Xây dựng và kiểm thử ứng dụng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/"
+  title="Triển khai ứng dụng bằng AWS CodeDeploy"
+  class="dd-item 
+        parent
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/">
+     <b> 4.5. </b> Triển khai ứng dụng bằng AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+  <ul>
+          
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/5.5.1-configure-codedeploy/"
+  title="Cấu hình AWS CodeDeploy"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/5.5.1-configure-codedeploy/">
+     <b> 4.5.1. </b> Cấu hình AWS CodeDeploy 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/"
+  title="Triển khai và kiểm tra ứng dụng"
+  class="dd-item 
+        
+        active
+        
+        "
+>
+  <a href="/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/">
+     <b> 4.5.2. </b> Triển khai và kiểm tra ứng dụng 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.6-cleanup/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.6-cleanup/">
+     <b> 4.6. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.7-monitoring-and-testing/"
+  title="Giám sát và kiểm thử"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.7-monitoring-and-testing/">
+     <b> 4.7. </b> Giám sát và kiểm thử 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+            
+<li
+  data-nav-id="/vi/5-workshop/5.8-clean-up-aws-resources/"
+  title="Dọn dẹp tài nguyên"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/5-workshop/5.8-clean-up-aws-resources/">
+     <b> 4.8. </b> Dọn dẹp tài nguyên 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+     
+  </ul>
+  
+</li>
+           
+<li
+  data-nav-id="/vi/6-self-evaluation/"
+  title="Tự đánh giá"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/6-self-evaluation/">
+     <b> 5. </b> Tự đánh giá 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+           
+<li
+  data-nav-id="/vi/7-feedback/"
+  title="Chia sẻ và phản hồi"
+  class="dd-item 
+        
+        
+        
+        "
+>
+  <a href="/vi/7-feedback/">
+     <b> 6. </b> Chia sẻ và phản hồi 
+    <i class="fas fa-check read-icon"></i>
+    
+  </a>
+   
+</li>
+    
+    </ul>
+
+     
+    <section id="shortcuts">
+      <h3>
+        More
+      </h3>
+      <ul>
+        
+        <li>
+          <a class="padding" href="http://awsstudygroup.com"
+            ><i class='fab fa-aws'></i> AWS Study Group - Blog</a
+          >
+        </li>
+        
+        <li>
+          <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"
+            ><i class='fab fa-facebook'></i> AWS Study Group - Nhóm FB</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+     
+    <section id="prefooter">
+      <hr />
+      <ul>
+        
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+            <div class="select-style">
+              <select id="select-language" onchange="location = this.value;">
+                       
+                <option
+                  id="en"
+                  value="https://workshop-sample.awsfcaj.com/5-workshop/5.5-policy/5.5.2-deploy-and-verify/"
+                >
+                  English
+                </option>
+                            
+                <option
+                  id="vi"
+                  value="https://workshop-sample.awsfcaj.com/vi/5-workshop/5.5-policy/5.5.2-deploy-and-verify/"
+                  selected
+                >
+                  Tiếng Việt
+                </option>
+                   
+              </select>
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="255px"
+                height="255px"
+                viewBox="0 0 255 255"
+                style="enable-background: new 0 0 255 255"
+                xml:space="preserve"
+              >
+                <g>
+                  <g id="arrow-drop-down">
+                    <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </a>
+        </li>
+         
+        <li>
+          <a class="padding" href="#" data-clear-history-toggle=""
+            ><i class="fas fa-history fa-fw"></i> Clear History</a
+          >
+        </li>
+        
+      </ul>
+    </section>
+    
+    <section id="footer"><left>
+    <br>
+    <br>
+    <b> Last Updated </b> <br>
+    <i>
+        <font color=orange>08-11-2026</font>
+    </i>
+</left>
+<left>
+    <br>
+    <br>
+    <b> Team </b> <br>
+    <i>
+        <a href="https://www.facebook.com/groups/660548818043427" style="color:orange">First Cloud AI Journey</a>
+    </i>
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script></section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/vi/'>Báo cáo thực tập</a> > <a href='/vi/5-workshop/'>Workshop</a> > <a href='/vi/5-workshop/5.5-policy/'>Triển khai ứng dụng bằng AWS CodeDeploy</a> > Triển khai và kiểm tra ứng dụng
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+  <div class="wrapper"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#bước-1-chuẩn-bị-các-tệp-triển-khai">Bước 1: Chuẩn bị các tệp triển khai</a></li>
+    <li><a href="#bước-2-build-ứng-dụng">Bước 2: Build ứng dụng</a></li>
+    <li><a href="#bước-3-bắt-đầu-triển-khai">Bước 3: Bắt đầu triển khai</a>
+      <ul>
+        <li><a href="#phương-án-a-triển-khai-thông-qua-codepipeline">Phương án A: Triển khai thông qua CodePipeline</a></li>
+        <li><a href="#phương-án-b-tạo-một-lần-triển-khai-thủ-công">Phương án B: Tạo một lần triển khai thủ công</a></li>
+      </ul>
+    </li>
+    <li><a href="#bước-4-kiểm-tra-trạng-thái-triển-khai">Bước 4: Kiểm tra trạng thái triển khai</a></li>
+    <li><a href="#bước-5-kiểm-tra-ứng-dụng-trên-ec2">Bước 5: Kiểm tra ứng dụng trên EC2</a></li>
+    <li><a href="#bước-6-kiểm-tra-ứng-dụng-web">Bước 6: Kiểm tra ứng dụng Web</a></li>
+    <li><a href="#bước-7-ghi-nhận-kết-quả">Bước 7: Ghi nhận kết quả</a></li>
+    <li><a href="#xử-lý-sự-cố">Xử lý sự cố</a></li>
+    <li><a href="#kết-quả">Kết quả</a></li>
+  </ul>
+</nav></div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Triển khai và kiểm tra ứng dụng
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="bước-1-chuẩn-bị-các-tệp-triển-khai">Bước 1: Chuẩn bị các tệp triển khai</h2>
+<p>AWS CodeDeploy cần một bản sửa đổi ứng dụng (Application Revision) chứa các tệp cần triển khai và tệp <code>appspec.yml</code> mô tả các hướng dẫn triển khai.</p>
+<p>Trong thư mục dự án, kiểm tra xem các tệp triển khai đã tồn tại hay chưa:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>cicd-aws-demo/
+</span></span><span style="display:flex;"><span>├── appspec.yml
+</span></span><span style="display:flex;"><span>├── buildspec.yml
+</span></span><span style="display:flex;"><span>├── pom.xml
+</span></span><span style="display:flex;"><span>├── scripts/
+</span></span><span style="display:flex;"><span>│   ├── install_dependencies.sh
+</span></span><span style="display:flex;"><span>│   ├── start_server.sh
+</span></span><span style="display:flex;"><span>│   └── stop_server.sh
+</span></span><span style="display:flex;"><span>└── src/
+</span></span></code></pre></div><p>Tên tệp và cấu trúc thư mục trong Revision phải khớp với các đường dẫn được chỉ định trong <code>appspec.yml</code>.</p>
+<p>Đối với triển khai trên EC2, tệp AppSpec phải có tên <code>appspec.yml</code> và được đặt tại thư mục gốc của Revision triển khai.</p>
+<h2 id="bước-2-build-ứng-dụng">Bước 2: Build ứng dụng</h2>
+<p>Thực hiện Build và kiểm thử ứng dụng Spring Boot trước khi triển khai.</p>
+<p>Tại thư mục dự án, chạy lệnh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\mvnw.cmd clean test package
+</span></span></code></pre></div><p>Kiểm tra kết quả Build. Maven cần hoàn tất thành công và tệp JAR của ứng dụng phải được tạo trong thư mục <code>target/</code>.</p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ChildItem .\target\*.jar
+</span></span></code></pre></div><p>Nếu các bài kiểm thử thất bại hoặc tệp JAR không được tạo, hãy khắc phục vấn đề trước khi tiếp tục.</p>
+<h2 id="bước-3-bắt-đầu-triển-khai">Bước 3: Bắt đầu triển khai</h2>
+<p>Có hai cách để bắt đầu quá trình triển khai.</p>
+<h3 id="phương-án-a-triển-khai-thông-qua-codepipeline">Phương án A: Triển khai thông qua CodePipeline</h3>
+<p>Sử dụng phương án này khi dự án đã được kết nối với AWS CodePipeline.</p>
+<ol>
+<li>Mở <strong>AWS CodePipeline</strong>.</li>
+<li>Chọn Pipeline đã được cấu hình cho dự án <code>cicd-aws-demo</code>.</li>
+<li>Chọn <strong>Release change</strong> nếu Pipeline không tự động được kích hoạt.</li>
+<li>Chờ các giai đoạn Source, Build và Deploy thực thi.</li>
+<li>Mở giai đoạn Deploy để kiểm tra trạng thái.</li>
+</ol>
+<p>Giai đoạn triển khai cần sử dụng CodeDeploy Application <code>cicd-aws-demo-app</code> và Deployment Group <code>cicd-aws-demo-deployment-group</code>.</p>
+<h3 id="phương-án-b-tạo-một-lần-triển-khai-thủ-công">Phương án B: Tạo một lần triển khai thủ công</h3>
+<p>Sử dụng phương án này để kiểm tra CodeDeploy trước khi kết nối với CodePipeline.</p>
+<ol>
+<li>
+<p>Mở <strong>AWS CodeDeploy</strong>.</p>
+</li>
+<li>
+<p>Chọn <strong>Applications</strong> và mở <code>cicd-aws-demo-app</code>.</p>
+</li>
+<li>
+<p>Chọn Deployment Group <code>cicd-aws-demo-deployment-group</code>.</p>
+</li>
+<li>
+<p>Chọn <strong>Create deployment</strong>.</p>
+</li>
+<li>
+<p>Chọn nguồn Revision phù hợp.</p>
+<p>Đối với Revision lưu trên S3, hãy chọn S3 Bucket, Object Key và Version hoặc ETag theo yêu cầu. Revision được tải lên phải chứa tệp <code>appspec.yml</code> tại thư mục gốc.</p>
+</li>
+<li>
+<p>Chọn <strong>Create deployment</strong>.</p>
+</li>
+<li>
+<p>Chờ quá trình triển khai hoàn tất.</p>
+</li>
+</ol>
+<p>Quá trình triển khai thủ công yêu cầu một Revision đã được đóng gói và tải lên nguồn lưu trữ đã chọn. Chỉ Build tệp JAR trên máy tính cục bộ không đồng nghĩa với việc đã tạo được Revision triển khai trên S3.</p>
+<h2 id="bước-4-kiểm-tra-trạng-thái-triển-khai">Bước 4: Kiểm tra trạng thái triển khai</h2>
+<p>Trong CodeDeploy, mở thông tin chi tiết của lần triển khai và kiểm tra trạng thái.</p>
+<ul>
+<li><strong>Succeeded:</strong> Các giai đoạn trong vòng đời triển khai đã hoàn tất thành công.</li>
+<li><strong>Failed:</strong> Mở thông tin chi tiết của lần triển khai và kiểm tra Lifecycle Event bị lỗi.</li>
+<li><strong>In Progress:</strong> Chờ quá trình triển khai hoàn tất trước khi kiểm tra ứng dụng.</li>
+</ul>
+<p>Kiểm tra các Lifecycle Event để xác định lỗi xảy ra trong giai đoạn DownloadBundle, Install, ApplicationStart hoặc một Deployment Hook khác.</p>
+<h2 id="bước-5-kiểm-tra-ứng-dụng-trên-ec2">Bước 5: Kiểm tra ứng dụng trên EC2</h2>
+<p>Kết nối đến EC2 Instance và kiểm tra tiến trình ứng dụng cũng như nhật ký hoạt động (Logs).</p>
+<p>Đối với Instance chạy Linux, có thể sử dụng các lệnh sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps -ef | grep java
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u codedeploy-agent --no-pager -n <span style="color:#ae81ff">100</span>
+</span></span></code></pre></div><p>Nếu ứng dụng ghi nhật ký vào tệp, hãy kiểm tra Application Log tại đường dẫn lưu trữ đã được cấu hình.</p>
+<p>Nếu quá trình triển khai thành công nhưng ứng dụng không phản hồi, hãy kiểm tra các yếu tố sau:</p>
+<ul>
+<li>Tiến trình Spring Boot có đang chạy hay không.</li>
+<li>Ứng dụng có đang lắng nghe trên đúng cổng được cấu hình hay không.</li>
+<li>Security Group của EC2 có cho phép lưu lượng truy cập đến cổng đó hay không.</li>
+<li>Các tập lệnh triển khai có sử dụng đúng đường dẫn tệp và có quyền thực thi phù hợp hay không.</li>
+</ul>
+<h2 id="bước-6-kiểm-tra-ứng-dụng-web">Bước 6: Kiểm tra ứng dụng Web</h2>
+<p>Nếu ứng dụng Spring Boot được cấu hình để lắng nghe trên cổng <code>8080</code>, hãy mở địa chỉ sau trong trình duyệt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://&lt;EC2-Public-IP&gt;:8080
+</span></span></code></pre></div><p>Thay <code>&lt;EC2-Public-IP&gt;</code> bằng địa chỉ IPv4 Public thực tế của EC2 Instance.</p>
+<p>Nếu ứng dụng sử dụng cổng khác hoặc một Endpoint cụ thể, hãy sử dụng đúng cổng và Endpoint đã được cấu hình.</p>
+<p>Nếu trang web không tải được, hãy kiểm tra trạng thái hoạt động của ứng dụng ngay trên EC2 Instance, đồng thời kiểm tra Security Group và cấu hình mạng của EC2.</p>
+<h2 id="bước-7-ghi-nhận-kết-quả">Bước 7: Ghi nhận kết quả</h2>
+<p>Ghi lại các thông tin sau để đưa vào báo cáo dự án:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Hạng mục</th>
+          <th style="text-align: left">Kết quả mong đợi</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">CodeDeploy Application</td>
+          <td style="text-align: left"><code>cicd-aws-demo-app</code> đã tồn tại</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Deployment Group</td>
+          <td style="text-align: left"><code>cicd-aws-demo-deployment-group</code> đã tồn tại</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Trạng thái triển khai</td>
+          <td style="text-align: left"><code>Succeeded</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Tiến trình ứng dụng</td>
+          <td style="text-align: left">Đang chạy trên EC2</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Kiểm tra truy cập Web</td>
+          <td style="text-align: left">Ứng dụng phản hồi tại địa chỉ đã cấu hình</td>
+      </tr>
+  </tbody>
+</table>
+<p>Chụp ảnh màn hình trạng thái triển khai, các Lifecycle Event và kết quả kiểm tra thành công trên trình duyệt để làm minh chứng cho báo cáo tốt nghiệp.</p>
+<h2 id="xử-lý-sự-cố">Xử lý sự cố</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Vấn đề</th>
+          <th style="text-align: left">Nội dung cần kiểm tra</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Triển khai thất bại trước khi cài đặt</td>
+          <td style="text-align: left">Nguồn Revision, quyền IAM và vị trí của tệp <code>appspec.yml</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">EC2 Instance không được chọn</td>
+          <td style="text-align: left">Tags của Instance và tiêu chí lựa chọn trong Deployment Group</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">CodeDeploy Agent không khả dụng</td>
+          <td style="text-align: left">Việc cài đặt Agent, trạng thái dịch vụ và kết nối mạng</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ứng dụng không thể khởi động</td>
+          <td style="text-align: left">Quyền thực thi của Script, đường dẫn tệp, phiên bản Java và Application Logs</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Trình duyệt không thể kết nối</td>
+          <td style="text-align: left">Cổng ứng dụng, trạng thái tiến trình và Security Group của EC2</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="kết-quả">Kết quả</h2>
+<p>Ứng dụng đã được triển khai lên EC2 và được kiểm tra thông qua trạng thái triển khai, kiểm tra trên Instance và truy cập bằng trình duyệt.</p>
+<p>Sau khi triển khai thủ công thành công, có thể sử dụng cùng Application và Deployment Group để AWS CodePipeline thực hiện quá trình triển khai tự động.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/vi/5-workshop/5.5-policy/5.5.1-configure-codedeploy/" title="Cấu hình AWS CodeDeploy"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/vi/5-workshop/5.6-cleanup/" title="Dọn dẹp tài nguyên" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.min.js?1794149417"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1794149417"></script>
+    <script src="/js/jquery.sticky.js?1794149417"></script>
+    <script src="/js/featherlight.min.js?1794149417"></script>
+    <script src="/js/highlight.pack.js?1794149417"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1794149417"></script>
+    <script src="/js/learn.js?1794149417"></script>
+    <script src="/js/hugo-learn.js?1794149417"></script>
+
+    <link href="/mermaid/mermaid.css?1794149417" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1794149417"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function (i, s, o, g, r, a, m) {
+    i["GoogleAnalyticsObject"] = r;
+    ((i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date()));
+    ((a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]));
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(
+    window,
+    document,
+    "script",
+    "https://www.google-analytics.com/analytics.js",
+    "ga",
+  );
+
+  ga("create", "UA-158079754-2", "auto");
+  ga("send", "pageview");
+</script>
+
+  </body>
+</html>
